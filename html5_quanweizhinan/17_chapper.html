@@ -1,0 +1,157 @@
+<!DOCTYPE HTML >
+
+
+<html>
+
+
+<head>
+    <meta  charset="utf-8">
+
+    <style type="text/css">
+
+        [id="id_baidu"]{
+            background-color : blue;
+            padding: 4px;
+        }
+        [name^="hello"]{
+            background-color : red;
+            padding: 4px;
+        }
+        [class$="c"]{
+            background-color : green;
+            padding: 4px;
+        }
+
+        [name*="what"]{
+            background-color : yellow;
+            padding: 4px;
+        }
+
+        [class~="class_c"]{
+            background-color : black;
+            padding: 4px;
+        }
+
+    </style>
+
+    <style  type="text/css">
+
+        [name="bingji1"],[name="bingji2"] {
+
+                border: thin black solid;
+                padding: 4px;
+        }
+
+    </style>
+
+
+
+    <style  type="text/css">
+    
+        p [value="value"] {
+
+            background-color: red;
+            padding: 4px;
+        }
+
+    </style>
+
+    <style type="text/css">
+
+    #mytable th {
+
+            background-color: yellow;
+            padding: 4px;    
+    }
+
+    </style>
+
+    <style>
+        p > span > [name="hello"] {
+
+            background-color: blue;
+        }
+
+    </style>
+
+
+
+
+    <style     type="text/css">
+        p + #id_direct_brother {
+
+            background-color:  green;
+        }
+    </style>
+
+
+    <style type="text/css">
+
+        #id_direct_brother ~ #id_3 {
+
+            background-color: red;
+        }
+    </style>
+
+    <style  type="text/css">
+
+    a:before{
+
+        content: "click here";
+    }
+
+    a:after{
+
+        content:"!";
+    }
+    </style>
+
+
+</head>
+
+<body>
+
+
+    <p>  用来测试伪选择器::first-line,其代码如下所示：dafafaafafdsafsdfadfasfgadsgagsadgsadgsdgsadgfadsa</p>
+
+    
+    <a  id="id_baidu" class="class_a" href="http://www.baidu.com" >Vist the addres  </a>
+    <p  name="hello_test" class="class_a"> I like <span  class="class_b">  apples </span>  and  oranges. </p>
+    <p  class="class_a class_c">  two class </p>
+    <p name="test_name_what">  test  </p>
+
+    <p  name="bingji1">测试并集合1<a href="http:www.baidu.com" >baidu1 </a> </p>
+    <p name="bingji2">测试并集合2<a href="http:www.baidu.com" >baidu2 </a> </p>
+    <p> <span> <input  type="text"   name="hello"  value="后代选择器"    /> </span> </p>
+
+
+    <table  id="mytable">
+        <tr>  
+            <th> name </th> <th>  city </th>
+        </tr>
+        <tr>  
+            <th> student</th> <th>  class </th>
+        </tr>
+
+        <tr>  
+            <th> body </th> <th>  head </th>
+        </tr>
+
+    </table>
+
+    <p>  <span> 直接后代选择器 <span name="hello"> 文本 </span> </span> </p>
+
+    <p>  直接兄弟元素选择器  </p>
+    <p id="id_direct_brother">  you can  </p>
+    <p id="id_0">can you  </p>
+    <p  id="id_3">  no you  </p>
+
+
+
+
+
+</body>
+
+
+</html>
+

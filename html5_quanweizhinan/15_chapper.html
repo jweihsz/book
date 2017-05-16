@@ -1,0 +1,106 @@
+<!DOCTYPE HTML>
+
+<html>
+
+<head>
+<meta charset="utf-8">
+</head>
+
+
+<body>
+
+
+<p><img src="1234.png" usemap="#mymap" alt="this"></p>
+<map name="mymap">
+    <area   href="http://www.baidu.com"  shape="rect" coords="3,5,68,62" alt="Swimming" />
+    <area  href="http://www.cuizi.com"  shape="rect"  coords="70,5,130,62" alt="running">
+    <area  href="http://www.qq.com"  shape="default"  alt="default">
+</map>
+
+
+<header>
+<h1>  things i like </h1>
+<nav>
+    <ul>
+        <li>
+            <a href="http://www.baidu.com"  target="myframe" >  Fruits i like  </a>
+        </li>
+        <li>
+            <a href="http://www.qq.com" target="myframe"> Activies I like </a>
+        </li>
+    </ul>
+</nav>
+</header>
+
+<iframe name="myframe" src="http://www.cn.bing.com" width="900" height="100">  </iframe>
+
+<br />
+<embed src="http://www.iqiyi.com/v_19rr99gt4o.html" 
+ type="application/x-shockwave-flash" width="560"  height="349"  />
+
+<object  width="560" height="349"
+    data="http://www.iqiyi.com/v_19rr99gt4o.html"
+    type = "application/x-shockwave-flash">
+    <param name="allowFullScreen" value="true" />
+    <b>Sorry!</b> we can not display this content
+</object>
+
+<p>  this is a test </p>
+<!--
+<progress  id="myprogress" value="10" max="100" > </progress>
+
+
+
+<p>
+    <button type="button" value="30">  30% </button>
+    <button type="button" value="60">  60% </button>
+    <button type="button" value="90">  90% </button>
+</p>
+
+
+<script>
+
+    var buttons =  document.getElementsByTagName("BUTTON");
+    var progress = document.getElementById("myprogress");
+    for(var i=0;i<buttons.length;i++)
+    {
+        buttons[i].onclick = function(e) {
+
+            progress.value = e.target.value;
+        }
+
+    }
+
+
+</script>
+-->
+
+
+<meter  id="mymeter" value="10" max="100" high="80"  low="40" > </meter>
+<p>
+    <button type="button" value="30">  30% </button>
+    <button type="button" value="60">  60% </button>
+    <button type="button" value="90">  90% </button>
+</p>
+
+<script>
+    var buttons_meter =  document.getElementsByTagName("BUTTON");
+    var progress_metrer = document.getElementById("mymeter");
+    for(var i=0;i<buttons_meter.length;i++)
+    {
+        buttons_meter[i].onclick = function(e) {
+            progress_metrer.value = e.target.value;
+        }
+    }
+</script>
+
+
+
+
+
+
+
+</body>
+
+
+</html>

@@ -1,0 +1,101 @@
+<!DOCTYPE HTML>
+
+<html>
+
+<head>
+
+<meta charset="utf-8">
+
+
+</head>
+
+
+<body>
+
+
+    <label  for="id_test">test:<input   type="text"  name="test_one"  id="id_test"  size="1" maxlength="1"  /></label>
+    <br />
+    <p><label for="id_placeholder">placeholder:<input id="id_placeholder"  list="id_fruit_selsect" placeholder="input the code"/></label></p>
+
+    <p><label  for="id_readonly">readonly: <input id="id_readonly" value="readonly" readonly></label></p>
+    <datalist id="id_fruit_selsect">
+    <option value="apples" label="hello0"> </option>
+    <option value="oranges" label="hello1"> </option>
+    <option value="chrrites" label="hello2"> </option>
+    </datalist>
+    <p><label  for="id_password">password: <input  type="password""  id="id_password" /> </label> </p>
+
+    <!-- 测试input生成按钮 -->
+    <input  type="button"  value="common_button"  />
+    <input  type="reset"  value="reset_button" />
+    <input type="submit" value="submit_button">
+
+    <!-- 测试input筛选数据的输入 -->
+    <br /><br /><br /><br /><br />
+    <input   type="number"   id="id_number"   min="200" max="210"  step="3"  value="100.0"  required  />
+    
+    <p><label for="id_range">range:1<input type="range" id="id_range"  value="10"  min="1"  max="100" step="2"  required />100</label></p>
+
+    <p>
+        <label for="id_checkbox">
+            checkbox:<input    id="id_checkbox" type="checkbox"  value="off" required  />
+        </label>
+    </p>
+
+
+    <form   method="post"  enctype="multipart/form-data"  action="http://www.baidu.com" target="_blank">
+    <p>
+        <fieldset>
+            <legend>  vote your fruit </legend>
+            <label  for="id_apple"> 
+              <input   id="id_apple" type="radio"  value="1" name="fruit" /> apple      
+            </label>
+
+            <label for="id_bannan">
+                <input   id="id_bannan"  type="radio"  value="2" name="fruit" />bannan
+            </label>
+
+            <label>
+                <input  id="id_lizi"  type="radio" value="3"  name="fruit"  checked />lizi
+            </label>
+        </fieldset>
+    </p>
+    <input   type="image" src="accept.png"  name="submit_hello" >
+    <input   type="file"  name="file" />
+    </form>
+
+    <p>
+        <label for="id_email">
+            email: <input   type="email"  id="id_email"   name="email"  placeholder="uer@domain.com" />
+        </label>
+    </p>
+
+
+    <p>
+        <label  for="id_date">
+           data: <input  type="date" id="id_date"   name="date" value="2016-10-19"  />
+        </label>
+    </p>
+
+    <p>
+        <label for="id_time">
+            time: <input   type="time"   id="id_time" name="time"  value="00:00:00"  required />
+        </label>
+    </p>
+
+    <p>
+        <label for="id_color">
+            选择颜色：<input   type="color"  id="id_color"  name="color"  />
+        </label>
+    </p>
+
+    <p>
+       <input   type="hidden"  value="123456"   id="id_hidden"  />
+    </p>
+
+
+</body>
+
+</html>
+
+

@@ -1,0 +1,178 @@
+<!DOCTYPE HTML>
+
+
+<html>
+
+<head>
+
+<meta  charset="utf-8">
+
+
+<!--
+
+<style>
+    #id_test_alain{
+
+        border: medium  double black;
+        margin: 5px;
+        padding:5px;
+        width:900px;
+        backfround-color: lightgrey;
+        white-space:pre-wrap;
+    }
+</style>
+
+
+
+
+<style>
+    #id_test_alain{
+
+        border: medium  double black;
+        margin: 5px;
+        padding:5px;
+        width:900px;
+        backfround-color: lightgrey;
+        white-space:pre-wrap;
+        word-spaceing:10px;
+        letter-spacing: 2px;
+        line-height:3em;
+    }   
+</style>
+
+
+
+
+<style>
+
+    #id_test_word0{
+
+        word-wrap:normal;
+
+    }
+    #id_test_word1{
+
+        word-wrap:break-word;
+
+    }
+
+</style>
+
+
+<style>
+    #id_test_alain{
+
+        text-indent:  10%; 
+    }
+
+</style>
+
+
+
+
+<style>
+    #id_test_alain{
+
+        text-decoration: overline;
+        text-transform: uppercase;   
+    }
+
+</style>
+-->
+
+
+
+
+<style>
+    #id_test_alain{
+
+        text-shadow:0.1em  0.1em 5px lightgrey;
+
+
+    }
+
+    #id_test_alain0{
+
+         text-shadow:0.1em  0.1em 25px red;
+
+    }
+
+
+</style>
+
+
+
+</head>
+
+
+
+
+<body>
+
+
+
+<p  id="id_test_word0">
+    this is just a testffffffffffffffffffffffffffffffffffffffffffffff123445567890
+
+</p>
+
+<p  id="id_test_word1">
+    this is just a testffffffffffffffffffffffffffffffffffffffffffffff123445567890
+
+</p>
+
+
+
+<p id="id_test_alain">
+    this is just a test for it .       and goto where and  where.
+    this is just a test for it .       and goto where and  where.
+    this is just a test for it .       and goto where and  where.
+    this is just a test for it .       and goto where and  where.
+    this is just a test for it .       and goto where and  where.
+    this is just a test for it .       and goto where and  where.
+    this is just a test for it .       and goto where and  where.
+    this is just a test for it .        and goto where and  where.
+</p>
+
+
+<p id="id_test_alain0">
+    this is just a test for it .       and goto where and  where.
+    this is just a test for it .       and goto where and  where.
+    this is just a test for it .       and goto where and  where.
+    this is just a test for it .       and goto where and  where.
+    this is just a test for it .       and goto where and  where.
+    this is just a test for it .       and goto where and  where.
+    this is just a test for it .       and goto where and  where.
+    this is just a test for it .        and goto where and  where.
+</p>
+
+<p>
+    <button> start </button>
+    <button>  end </button>
+    <button>  left </button>
+    <button>  right </button>
+    <button>  center </button>
+    <button>  justify </button>
+</p>
+
+<script>
+    var buttons = document.getElementsByTagName("button");
+    var i = 0;
+    for(i=0;i<buttons.length; i++)
+    {
+        buttons[i].onclick = function(e){
+
+            document.getElementById("id_test_alain").style.textAlign = e.target.innerHTML;
+        }
+    }
+</script>
+
+
+
+</body>
+
+
+
+
+
+</html>

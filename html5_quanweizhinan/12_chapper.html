@@ -1,0 +1,39 @@
+<!DOCTYPE HTML>
+
+<html>
+
+<head>
+
+<meta charset="utf-8">
+
+</head>
+
+
+<body>
+
+<form  id="id_form_extern"  method="post"  target="_blank" action="http://www.baidu.com" autocomplete="off">
+
+<fieldset disabled>
+    <legend> the part one  </legend>
+    <p><label for="id_one">one: <input  name="one" id="id_one" /> </label></p>
+    <p><label for="two_id">two: <input  name="two" id="two_id" />  </label></p>
+</fieldset>
+
+
+<fieldset>
+    <legend>  the part two </legend>
+    <p><label for="id_three">three: <input  name="three" id="id_three" /> </label></p>
+    <p><label for="id_four">four: <input  name="four" id="id_four" />  </label></p>
+    <p><label for="id_five">four: <input  name="five" id="id_five" />  </label></p>
+</fieldset>
+
+<p><button  type="reset">复位</button> </p>
+</form>
+
+
+<p><label for="id_extern">extern: <input   name="extern_test" id="id_extern"  form="id_form_extern"/> </label> </p>
+<p><button  type="submit"  form="id_form_extern" >extern </button></p>
+</body>
+
+
+</html>

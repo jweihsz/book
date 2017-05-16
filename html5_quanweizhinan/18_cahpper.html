@@ -1,0 +1,232 @@
+<!DOCTYPE   HTML>
+
+
+<html>
+
+<head>
+
+    <meta charset="utf-8">
+
+<!--
+    <style  type="text/css">
+     :root {
+         border: thin  red  solid;
+         padding: 4px;
+     }
+
+    </style>
+
+
+
+    <style   type="text/css">
+        :first-child {
+
+            border : thin   blue  solid;
+            padding: 20px;
+        }
+
+    </style>
+
+
+    <style  type="text/css">
+
+        body p :last-child{
+
+            border: thin   red   solid;
+            padding: 5px;
+        }
+    </style>
+
+    <style  type="text/css">
+
+        :only-child{
+
+            color:red;
+        }
+
+
+    </style>
+
+
+    <style  type="text/css">
+
+        .wrapper :only-of-type{
+
+            color: blue;
+        }
+
+    </style>
+
+    <style  type="text/css">
+
+        .wrapper :nth-child(2){
+
+            color:red;
+        } 
+
+    </style>
+
+    <style type="text/css">
+
+        :enabled {
+
+            color: yellow;
+        }
+        :disabled{
+
+            color: green;
+        }
+
+    </style>
+
+    <style  type="text/css">
+        :checked + span {
+
+            background-color: red;
+            color:white;
+            padding: 5px;
+            border: medium solid  black;
+        }
+
+    </style>
+
+
+    <style  type="text/css">
+
+        :default{
+            background-color: red;
+            color:white;
+            padding: 5px;
+            border: medium solid  black;
+        }
+
+    </style>
+
+
+    <style type="text/css">
+        :valid{
+            outline: medium  solid  red;
+        }
+
+        :invalid{
+
+            outline: medium  solid  blue;
+        }
+    </style>
+
+
+
+    <style  type="text/css">
+
+        :link{
+
+            color:red;
+        }
+
+        :visited{
+
+            color:blue;
+        }
+
+    </style>
+
+
+    <style  type="text/css">
+        :hover{
+            border: thin  black solid;
+            padding: 4px;
+        }
+    </style>
+
+
+    <style type="text/css">
+        button:active{
+
+            color:red;
+        }
+    </style>
+
+
+    <style type="text/css">
+
+        :focus{
+
+            color:red;
+            border: black  thin  solid;
+            padding:5px;
+        }
+    </style>
+-->
+
+
+    <style   type="text/css">
+        a:not([href *= "baidu"]){
+
+            color:yellow;
+            border:thin  red solid;
+            padding:10px;
+        }
+
+    </style>
+
+
+
+
+</head>
+
+
+<body>
+
+
+    <p><a href="http://www.baidu.com"> 否定选择器1 </a></p>
+    <p><a href="http://www.hao123.com"> 否定选择器2  </a></p>
+
+    <button>  测试激活 </button>
+     <br  />
+
+    <a  href="http://www.hao123.com"> 测试超级visited 和 link  </a>
+    <p> this is a test1   </p>
+    <p> this is a test2   </p>
+
+    <p>  测试第一个子元素会被选中：<span> 我将被选中 </span>    <span>  我不会被选中 </span> </p>
+    <p> 测试只有唯一一个子元素<span>我将会被选中</span> </p>
+
+    <div   class="wrapper">
+        <p>  我是一个段落1  </p>
+        <p>  我是一个段落2  </p>
+        <p>  我是一个段落3  </p>
+        <div>  我是一个div元素 </div>
+    </div>  
+
+    <br />
+    <br  /
+    <textarea>  this is abled </textarea>
+    <br  />
+    <textarea  disabled>  this is disbaled </textarea>
+
+    <form  method="post"  action="http://www.baidu.com">
+        <p>
+            <label for=""id_test_for" >
+                do you like apples:
+            </label>
+            <input  type="checkbox"  id="id_test_for"  name="apples"  />
+            <span>  this  will go red when checked  </span>
+        </p>
+        <input  type="submit"  value="submit"  />
+        <input  type="reset"  value="reset"   />
+    </form>
+   
+   <br />
+   <br />
+   <br />
+   <br />
+   <label for="test_vaild0">
+      input_apple:<input   id="test_vaild0"  required  /> 
+    </label>
+
+</body>
+
+
+
+
+</html>
