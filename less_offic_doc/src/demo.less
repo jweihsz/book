@@ -1,0 +1,169 @@
+/*变量计算*/
+@nice_blue:#F938AB;
+@light_blue: @nice_blue +  #777;
+#test0{
+	
+	background-color:@light_blue;
+}
+
+/*函数的调用*/
+.round-corners(@radious:15px){
+	
+	-webkit-border-radius:@radious;
+	-moz-border-radius:@radious;
+	 border-radius:@radious;
+}
+
+#test1{
+	
+	padding:20px;
+	width:200px;
+	height:100px;
+	border:2px  solid red;
+	.round-corners;     /*调用默认的参数*/
+}
+
+
+#test2{
+	
+	padding:20px;
+	width:200px;
+	height:100px;
+	border:2px  solid red;
+	.round-corners(30px);     /*参数设置为30px*/
+}
+
+
+/*嵌套的使用*/
+#test3{
+	
+	h1{
+
+		font-size:26px;
+		font-weight:bold;
+	}
+
+	span{
+
+		font-size:12px;
+		a{
+
+			text-decoration:none;
+			&:active{
+
+				font-size:150%;
+			}
+
+			&:visited{
+
+				color:blue;	
+			}
+
+			&:hover{
+
+				border-width:1px;
+				color:red;
+
+			}
+
+
+		}
+	}
+}
+
+
+
+/*条件判断*/
+
+.mixin(@a) when(lightness(@a) >= 50%){
+	
+	background-color:black;
+}
+
+.mixin(@a) when(lightness(@a) < 50%){
+	
+	background-color:white;
+}
+.mixin(@a){
+	
+	color: @a;
+}
+
+
+
+#test4{
+	
+	.mixin(#DDD);	
+}
+
+
+
+
+/*变量作用域*/
+@global_color: red;
+
+#test5{
+	
+	@global_color:blue;
+	background-color:@global_color;
+}
+
+
+#test6{
+	background-color:@global_color;	
+}
+
+
+/*测试从外部导入*/
+@import "test.less";
+
+
+#test7{
+	
+	background-color:@test_import;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

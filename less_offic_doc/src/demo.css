@@ -1,0 +1,62 @@
+/*变量计算*/
+#test0 {
+  background-color: #ffafff;
+}
+/*函数的调用*/
+#test1 {
+  padding: 20px;
+  width: 200px;
+  height: 100px;
+  border: 2px  solid red;
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  border-radius: 15px;
+  /*调用默认的参数*/
+}
+#test2 {
+  padding: 20px;
+  width: 200px;
+  height: 100px;
+  border: 2px  solid red;
+  -webkit-border-radius: 30px;
+  -moz-border-radius: 30px;
+  border-radius: 30px;
+  /*参数设置为30px*/
+}
+/*嵌套的使用*/
+#test3 h1 {
+  font-size: 26px;
+  font-weight: bold;
+}
+#test3 span {
+  font-size: 12px;
+}
+#test3 span a {
+  text-decoration: none;
+}
+#test3 span a:active {
+  font-size: 150%;
+}
+#test3 span a:visited {
+  color: blue;
+}
+#test3 span a:hover {
+  border-width: 1px;
+  color: red;
+}
+/*条件判断*/
+#test4 {
+  background-color: black;
+  color: #DDD;
+}
+/*变量作用域*/
+#test5 {
+  background-color: blue;
+}
+#test6 {
+  background-color: red;
+}
+/*测试从外部导入*/
+#test7 {
+  background-color: red;
+}
