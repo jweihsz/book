@@ -1,42 +1,15 @@
 
 
-
-var obj0 = {
-	
-	
-	q:2,
-	
-};
-var obj1 = {
-	
-	
-	f:2,
-	
-};
-
-function test(obj){
-	
-	with(obj){
+function process_data(data){
 		
-		q = 3;	
-	}
 }
 
-test(obj0);
-console.log(obj0.q); //3
-test(obj1);  
-console.log(obj1.q);/*undefined*/
-console.log(q); /*3,q被泄露成全局变量了*/
+/*人为的增加作用区域*/
+{
+	let some_big_dta = {};
+	process_data(some_big_dta);	
+}
 
-
-
-
-
-
-
-
-
-
-
+/*执行到这里后上面的数据可以释放了*/
 
 
