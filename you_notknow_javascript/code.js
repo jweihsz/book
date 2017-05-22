@@ -1,20 +1,4 @@
-foo();  //1
-var foo;
-function   foo(){   /*函数被首先提升*/
-	
-	console.log("1");
+for(let i=0;i<=5;i++){
+
+	setTimeout(function timer(){ console.log(i);},i*1000);
 }
-foo = function(){
-	
-	console.log("2");
-};
-
-
-
-
-
-
-
-
-
-
