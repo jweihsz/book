@@ -1,15 +1,20 @@
-
-
-function process_data(data){
-		
+foo();  //1
+var foo;
+function   foo(){   /*函数被首先提升*/
+	
+	console.log("1");
 }
+foo = function(){
+	
+	console.log("2");
+};
 
-/*人为的增加作用区域*/
-{
-	let some_big_dta = {};
-	process_data(some_big_dta);	
-}
 
-/*执行到这里后上面的数据可以释放了*/
+
+
+
+
+
+
 
 
