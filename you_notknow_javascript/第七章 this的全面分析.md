@@ -191,6 +191,144 @@ console.log(b); /*5*/
 
 
 
+#####2.3 优先级
+
+(1)默认绑定是优先级级最低的。显示绑定的优先级高于隐式绑定：
+```
+function foo(){
+
+	console.log(this.a);
+}
+
+let obj1 = {
+
+	a:2,
+	foo:foo
+};
+
+let obj2 = {
+
+	a:3,
+	foo:foo
+};
+
+obj1.foo();  /*2*/
+obj2.foo();  /*3*/
+
+obj1.foo.call(obj2);  /*3*/
+obj2.foo.call(obj1);  /*2*/
+
+```
+
+
+(2)new 绑定比隐式绑定优先级高
+```
+function foo(something){
+
+	this.a = something;
+}
+
+let  obj1 = {
+	foo:foo
+};
+
+let obj2 = {
+};
+
+obj1.foo(2);
+console.log(obj1.a);  //2
+obj1.foo.call(obj2,3);
+console.log(obj2.a);  //3
+let bar = new obj1.foo(4);
+console.log(obj1.a); //2
+console.log(bar.a);  //4
+
+```
+
+
+####2.4 绑定例外
+
+
+#####2.4.1 被忽略的this
+如何把null或者undefind作为this的绑定对象传入call或者apply，或者bind，这些值在调用的时候会被忽略，转而应用默认的绑定规则。
+
+```
+let a = 2;
+
+function foo(){
+
+	console.log(this.a);
+}
+
+foo.call(null);   /*2*/
+```
+
+是不是传递null就没用呢？其实不是，当使用apply和call时，如果你不在意this，只关注传递进入的参数，那么可以使用null作为占位符。看下面示范：
+
+```
+function foo(a,b){
+
+	console.log("a:" + a+ ",b:" + b);
+}
+
+
+//这里只关注传参
+foo.apply(null,[2,3]);
+
+//这里使用bind显示的绑定参数
+let bar  = foo.bind(null,2);
+
+bar(3);
+
+```
+
+####2.5  胖箭头
+
+胖箭头函数不使用this的四种标准规则。而是根据外层(函数或者全局)作用域来决定this。
+
+```
+let obj1 = {
+
+	a:2
+};
+let obj2={
+	a:3
+};
+
+function foo(){
+	//这里的this取决于这个函数
+	return  (a)=>{
+		console.log(this.a);	
+	};
+}
+let  bar = foo.call(obj1);  /*这里用obj1进行了绑定*/
+bar.call(obj2);  //2,不是3
+```
+
+```
+function foo(){
+
+	
+	/*this绑定的是这个函数的作用区域，这里没有a，就会向全局寻找*/
+
+	setTimeout(()=>{
+	
+		console.log(this.a);
+	
+	},100);
+}
+
+
+let  obj = {
+
+	a:2
+};
+
+foo.call(obj);
+
+
+```
+
 
 
 
