@@ -1,24 +1,95 @@
 
 
-function foo(){
 
-	
-	/*this绑定的是这个函数的作用区域，这里没有a，就会向全局寻找*/
-
-	setTimeout(()=>{
-	
-		console.log(this.a);
-	
-	},100);
-}
-
-
-let  obj = {
+let obj = {
 
 	a:2
 };
 
-foo.call(obj);
+/*检查对象本身和原型链*/
+console.log(("a" in obj));  //true
+console.log(("b" in obj)); //false
+
+/*只检查对象本身*/
+obj.hasOwnProperty("a");
+obj.hasOwnProperty("b");
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
